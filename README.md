@@ -1,20 +1,10 @@
-# Premier League Analytics Dashboard
+# Premier League Match Prediction & Analytics Dashboard
 
 ## Overview
 
-This project analyzes historical Premier League match data using Python and Power BI to uncover patterns in team performance and match outcomes. The objective was to explore how match statistics such as goals, shots, corners, fouls, and disciplinary records relate to match results while building an interactive dashboard for data exploration and decision-making.
+This project explores whether historical Premier League match statistics can be used to predict match outcomes. Using Python, machine learning models, linear algebra concepts, and Power BI, the project analyzes match performance data and transforms it into interactive visual insights.
 
-The project combines data cleaning, feature engineering, statistical analysis, and business intelligence visualization to transform raw football data into actionable insights.
-
----
-
-## Project Objectives
-
-* Analyze historical Premier League match data
-* Explore relationships between match statistics and outcomes
-* Apply concepts from data science, linear algebra, and optimization
-* Develop an interactive Power BI dashboard for visual analysis
-* Demonstrate a complete data analytics workflow from raw data to visualization
+The goal was to investigate relationships between match statistics and results while demonstrating a complete analytics workflow from data preparation and feature engineering to predictive modeling and dashboard development.
 
 ---
 
@@ -23,26 +13,38 @@ The project combines data cleaning, feature engineering, statistical analysis, a
 * Python
 * Pandas
 * NumPy
+* Scikit-Learn
 * Power BI
 * GitHub
+
+---
+
+## Project Objectives
+
+* Analyze historical Premier League match data
+* Engineer meaningful performance features
+* Predict match outcomes using machine learning models
+* Apply linear algebra concepts to sports analytics
+* Visualize results through an interactive Power BI dashboard
+* Evaluate model performance and feature importance
 
 ---
 
 ## Data Pipeline
 
 1. Imported historical Premier League match data.
-2. Cleaned and standardized statistical features.
-3. Removed inconsistencies and handled missing values.
-4. Prepared the dataset for analysis and visualization.
-5. Generated analytical metrics and outcome indicators.
-6. Exported processed data for Power BI integration.
-7. Built an interactive dashboard to explore trends and performance metrics.
+2. Cleaned and standardized match statistics.
+3. Created engineered features from halftime and full-time performance metrics.
+4. Trained multiple prediction models.
+5. Evaluated model performance using classification metrics.
+6. Generated Power BI-ready datasets.
+7. Built an interactive dashboard for exploration and analysis.
 
 ---
 
 ## Match Statistics Analyzed
 
-The project focuses on several key match statistics:
+The project utilizes several match-level features, including:
 
 * Goals Scored
 * Shots
@@ -52,50 +54,86 @@ The project focuses on several key match statistics:
 * Yellow Cards
 * Red Cards
 
-These variables were used to evaluate team performance and investigate how statistical patterns relate to match outcomes.
+Additional engineered features include:
+
+* Goal Differential
+* Halftime Performance
+* Second Half Performance
+* Shot Differential
+* Corner Differential
+* Comeback Wins
+* Blown Leads
 
 ---
 
-## Analytical Approach
+## Machine Learning Models
 
-### Data Representation
+The project evaluates multiple predictive approaches:
 
-Each match is represented as a numerical feature vector containing match statistics.
+### Logistic Regression
 
-When combined, these vectors form a dataset where:
+Used to classify match outcomes based on historical match statistics and engineered features.
 
-* Rows represent individual matches
-* Columns represent statistical features
+### Random Forest Classifier
 
-This structure allows the data to be analyzed using statistical and machine learning concepts.
+Used to identify non-linear relationships within the data and generate feature importance rankings.
 
-### Similarity Analysis
+### Linear Algebra Prediction Model
 
-One technique explored was Euclidean Distance (L2 Norm) to measure similarity between matches.
+A custom prediction framework based on:
 
-The underlying assumption is that matches with similar statistical profiles may exhibit similar outcomes.
+**Aw = b**
 
-### Prediction Framework
+Where:
 
-The project investigated how weighted statistical features can be used to model match outcomes conceptually.
+* A = Match statistics matrix
+* w = Feature weights
+* b = Match outcomes
 
-This approach provides a foundation for future machine learning implementations while remaining interpretable and easy to understand.
+This model demonstrates how linear algebra concepts can be applied to predictive analytics.
 
 ---
 
-## Dashboard Features
+## Similarity Analysis
+
+The project implements Euclidean Distance (L2 Norm) to identify statistically similar matches.
+
+This approach allows:
+
+* Match comparison
+* Pattern identification
+* Historical similarity analysis
+
+The assumption is that matches with similar statistical profiles may exhibit similar outcomes.
+
+---
+
+## Model Evaluation
+
+Model performance was evaluated using:
+
+* Accuracy Score
+* Classification Reports
+* Confusion Matrices
+* Feature Importance Analysis
+
+These metrics help assess predictive effectiveness and identify influential match statistics.
+
+---
+
+## Power BI Dashboard
 
 The Power BI dashboard includes:
 
-* Team Performance Comparisons
-* Home vs Away Analysis
-* Match Outcome Distributions
-* Scoring Trends
-* Interactive Filters
-* KPI Tracking
-* Historical Performance Insights
+* Team Performance Analysis
+* Match Outcome Distribution
+* Home vs Away Performance
+* Goal Scoring Trends
+* Feature Importance Visualization
+* Prediction Accuracy Tracking
+* Interactive Filters and KPIs
 
-The dashboard enables users to explore data dynamically and identify meaningful trends across teams and seasons.
+The dashboard allows users to explore trends dynamically and gain insights from historical match data.
 
 ---
 
@@ -103,26 +141,16 @@ The dashboard enables users to explore data dynamically and identify meaningful 
 
 * Python Programming
 * Data Cleaning
-* Data Transformation
 * Feature Engineering
 * Data Analysis
+* Machine Learning
+* Logistic Regression
+* Random Forests
+* Linear Algebra Applications
 * Data Visualization
 * Power BI Development
 * Business Intelligence
-* Linear Algebra Applications
 * Sports Analytics
-
----
-
-## Limitations
-
-While the project provides valuable analytical insights, several limitations exist:
-
-* Primarily focuses on historical match statistics
-* Does not account for injuries or player availability
-* Does not include tactical or managerial factors
-* External conditions are not considered
-* Prediction concepts remain exploratory rather than production-ready
 
 ---
 
@@ -130,19 +158,18 @@ While the project provides valuable analytical insights, several limitations exi
 
 Potential enhancements include:
 
-* Logistic Regression Models
-* Random Forest Models
-* XGBoost Integration
-* Real-Time Data Integration
-* Rolling Team Form Metrics
-* Expected Goals (xG) Analysis
+* XGBoost Models
+* Real-Time Match Data Integration
+* Expected Goals (xG) Metrics
+* Team Form Tracking
+* Hyperparameter Optimization
 * Automated Dashboard Refreshes
-* Advanced Predictive Modeling
+* Advanced Prediction Models
 
 ---
 
 ## Dashboard Preview
 
-*Power BI dashboard screenshots will be added here.*
+*Screenshots of the Power BI dashboard will be added here.*
 
 ![Dashboard Screenshot](images/dashboard1.png)
